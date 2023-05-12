@@ -1,19 +1,31 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      FITPAL
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Gym-dynamic-gradient.png" alt="Image description">  
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="full" color="primary" routerLink="/workoutpage">Weights</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="full" color="secondary" routerLink="/cardiopage">Cardio</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="full" color="tertiary" routerLink="/sleeppage">Diet</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="full" color="success" routerLink="/foodpage">Sleep</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-button expand="full" color="warning" routerLink="/bmi">BMI</ion-button>
 
-  <div id="container">
- <h3>Welcome to Mobile Apps Starter project 2023</h3>
-  </div>
+  </ion-grid>
 </ion-content>

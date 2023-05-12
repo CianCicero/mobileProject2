@@ -10,7 +10,27 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'workoutpage',
+    loadChildren: () => import('./workoutpage/workoutpage.module').then( m => m.WorkoutpagePageModule)
   },
+  {
+    path: 'cardiopage',
+    loadChildren: () => import('./cardiopage/cardiopage.module').then( m => m.CardiopagePageModule)
+  },
+  {
+    path: 'sleeppage',
+    loadChildren: () => import('./sleeppage/sleeppage.module').then( m => m.SleeppagePageModule)
+  },
+  {
+    path: 'foodpage',
+    loadChildren: () => import('./foodpage/foodpage.module').then( m => m.FoodpagePageModule)
+  },
+  {
+    path: 'bmi',
+    loadChildren: () => import('./bmi/bmi.module').then( m => m.BmiPageModule)
+  },
+
 ];
 
 @NgModule({

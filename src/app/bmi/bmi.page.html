@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      BMI Calculator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Calculate Your BMI</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Height (cm)</ion-label>
+        <ion-input [(ngModel)]="height" type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Weight (kg)</ion-label>
+        <ion-input [(ngModel)]="weight" type="number"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" (click)="calculateBMI()">Calculate</ion-button>
+
+      <ion-item *ngIf="bmiResult">
+        <ion-label>BMI Result:</ion-label>
+        <ion-input [(ngModel)]="bmiResult" readonly></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
